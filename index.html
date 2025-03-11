@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Security Scanner</title>
+</head>
+<body>
+    <h2>Network Security Scanner</h2>
+    <form method="post">
+        <input type="text" name="target" placeholder="Enter IP Address">
+        <button type="submit">Scan</button>
+    </form>
+    {% if scan_results %}
+        <h3>Scan Results</h3>
+        <pre>{{ scan_results | tojson(indent=4) }}</pre>
+    {% endif %}
+    {% if vulnerabilities %}
+        <h3>Vulnerabilities</h3>
+        <pre>{{ vulnerabilities | tojson(indent=4) }}</pre>
+    {% endif %}
+</body>
+</html>
