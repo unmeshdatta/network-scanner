@@ -1,0 +1,10 @@
+nmap
+scapy
+python-nmap
+requests
+flask
+argparse
+json
+csv
+concurrent.futures
+unittest
